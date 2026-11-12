@@ -28,3 +28,23 @@ git commit -m "resolved merge conflict"
 git push -u origin b1
 
 git log --oneline --graph --all
+
+---------------only git in vs code------------------------
+git init
+git add .
+git commit -m "hii"
+
+git branch b1
+git switch b1
+git add .
+git commit -m "hello"
+
+git switch master
+git branch b2
+git switch b2
+git add .
+git commit -m "oii"
+
+git switch master
+git merge b1
+git merge b2
