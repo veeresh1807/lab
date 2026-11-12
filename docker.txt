@@ -1,2 +1,22 @@
 FROM httpd:latest
 COPY index.html /usr/local/apache2/htdocs/index.html
+
+docker commands
+
+docker build -t image_name .
+docker run -d -p host-port:container-port --name container-name image-name
+docker images
+docker tag imagename username/imagename:tag
+docker push username/imagename:tag
+docker pull username/imagename:tag
+docker rm container-name
+docker rmi image-name
+
+FROM tomcat:10.1-jdk17
+COPY index.html /usr/local/tomcat/webapps/ROOT/index.html
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
+
+
+
+
